@@ -1,0 +1,27 @@
+{
+  "name": "MTown Editor Tool",
+  "description": "A set of MTown's internal tools.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "author": {
+    "email": "user@example.com"
+  },
+  "icons": {
+     "128": "images/favicon.png"
+   },
+  "content_scripts": [
+    {
+      "matches": ["https://*.kuroco-mng.app/management/topics/topics_edit/?topics_group_id=1"],
+      "js": [
+        "js/kuroco/topics_edit_news.js"
+      ]
+    },
+    {
+      "matches": ["https://*.kuroco-mng.app/management/topics/topics_edit/?topics_group_id=15"],
+      "js": [
+        "js/kuroco/topics_edit_backnumbers.js"
+      ]
+    }
+  ]
+
+}
